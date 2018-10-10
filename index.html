@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <title>Nipema Työnohjaus - Raportit</title>
+  </head>
+  <body>
+    <div class="topbar">
+      <h1>Raportit</h1>
+      <h2>Valitse raportin ajanjakso</h2>
+      <label for="aloituspvm">Aloituspäivämäärä</label>
+      <input type="date" id="aloituspvm" name="aloituspvm" />
+      <label for="lopetuspvm">Lopetuspäivämäärä</label>
+      <input type="date" id="lopetuspvm" name="lopetuspvm" />
+    </div>
+    <div class="datalist">
+      <h2>Tilastot</h2>
+      <h3>Orsien määrä</h3>
+      <div class="data" id="total"></div>
+      <h4>Yhteensä</h4>
+      <div class="data" id="nollat"></div>
+      <h4>0-jaksot</h4>
+      <div class="data" id="maalatut"></div>
+      <h4>Maalatut jaksot</h4>
+
+      <h3>Reittivalinnat</h3>
+      <h4>Automaattimaalauksen läpi</h4>
+      <div class="data" id="automaatti"></div>
+      <h4>Käsikopin läpi</h4>
+      <div class="data" id="kasikoppi"></div>
+      <h3>Kuljettimen käyntiaika (on/off) viikossa</h3>
+      <h4>Käyntiaika / yhteensä orsia</h4>
+      <div class="data" id="kayntiaika_total"></div>
+      <h4>Käyntiaika / maalattuja orsia (jalostava)</h4>
+      <div class="data" id="kayntiaika_jalostava"></div>
+    </div>
+    <script>
+      // You can also require other files to run in this process
+      require('./renderer.js')
+    </script>
+  </body>
+</html>
